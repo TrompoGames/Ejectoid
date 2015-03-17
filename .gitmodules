@@ -1,0 +1,3 @@
+[submodule "Ejecta"]
+	path = Ejecta
+	url = git@github.com:TrompoGames/Ejecta.git
