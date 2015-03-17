@@ -11,8 +11,12 @@
 		A31D983C1A634AA300F468C4 /* CoreJava.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31D983B1A634AA300F468C4 /* CoreJava.framework */; };
 		A31D98411A634AA400F468C4 /* CoreJava.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31D983B1A634AA300F468C4 /* CoreJava.framework */; };
 		A31D98481A634AA400F468C4 /* Ejectoid-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A31D98471A634AA400F468C4 /* Ejectoid-Info.plist */; };
-		A31D984A1A634AA400F468C4 /* EjectoidActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = A31D98491A634AA400F468C4 /* EjectoidActivity.m */; };
-		A31D984C1A634AA400F468C4 /* EjectoidActivity.java in Sources */ = {isa = PBXBuildFile; fileRef = A31D984B1A634AA400F468C4 /* EjectoidActivity.java */; };
+		A381CD2E1AB89BA2001C4623 /* EjectoidActivity.java in Sources */ = {isa = PBXBuildFile; fileRef = A381CD2B1AB89BA2001C4623 /* EjectoidActivity.java */; };
+		A381CD2F1AB89BA2001C4623 /* EjectoidGLBridge.java in Sources */ = {isa = PBXBuildFile; fileRef = A381CD2C1AB89BA2001C4623 /* EjectoidGLBridge.java */; };
+		A381CD301AB89BA2001C4623 /* EjectoidGLView.java in Sources */ = {isa = PBXBuildFile; fileRef = A381CD2D1AB89BA2001C4623 /* EjectoidGLView.java */; };
+		A381CD351AB89BAA001C4623 /* EjectoidActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = A381CD321AB89BAA001C4623 /* EjectoidActivity.m */; };
+		A381CD361AB89BAA001C4623 /* EjectoidGL.c in Sources */ = {isa = PBXBuildFile; fileRef = A381CD331AB89BAA001C4623 /* EjectoidGL.c */; };
+		A381CD371AB89BAA001C4623 /* EjectoidGL.h in Headers */ = {isa = PBXBuildFile; fileRef = A381CD341AB89BAA001C4623 /* EjectoidGL.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +36,13 @@
 		A31D98401A634AA400F468C4 /* Ejectoid Java.jar */ = {isa = PBXFileReference; explicitFileType = compiled.java.jar; includeInIndex = 0; path = "Ejectoid Java.jar"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31D98461A634AA400F468C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A31D98471A634AA400F468C4 /* Ejectoid-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ejectoid-Info.plist"; sourceTree = "<group>"; };
-		A31D98491A634AA400F468C4 /* EjectoidActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EjectoidActivity.m; sourceTree = "<group>"; };
-		A31D984B1A634AA400F468C4 /* EjectoidActivity.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = EjectoidActivity.java; sourceTree = "<group>"; };
 		A31D984D1A634AA400F468C4 /* AndroidManifest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AndroidManifest.xml; sourceTree = "<group>"; };
+		A381CD2B1AB89BA2001C4623 /* EjectoidActivity.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = EjectoidActivity.java; sourceTree = "<group>"; };
+		A381CD2C1AB89BA2001C4623 /* EjectoidGLBridge.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = EjectoidGLBridge.java; sourceTree = "<group>"; };
+		A381CD2D1AB89BA2001C4623 /* EjectoidGLView.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = EjectoidGLView.java; sourceTree = "<group>"; };
+		A381CD321AB89BAA001C4623 /* EjectoidActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EjectoidActivity.m; sourceTree = "<group>"; };
+		A381CD331AB89BAA001C4623 /* EjectoidGL.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EjectoidGL.c; sourceTree = "<group>"; };
+		A381CD341AB89BAA001C4623 /* EjectoidGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EjectoidGL.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +96,11 @@
 		A31D98441A634AA400F468C4 /* Ejectoid */ = {
 			isa = PBXGroup;
 			children = (
-				A31D98471A634AA400F468C4 /* Ejectoid-Info.plist */,
-				A31D98491A634AA400F468C4 /* EjectoidActivity.m */,
-				A31D984B1A634AA400F468C4 /* EjectoidActivity.java */,
-				A31D984D1A634AA400F468C4 /* AndroidManifest.xml */,
+				A381CD311AB89BAA001C4623 /* Native */,
+				A381CD271AB89BA2001C4623 /* Java */,
 				A31D98451A634AA400F468C4 /* Supporting Files */,
+				A31D98471A634AA400F468C4 /* Ejectoid-Info.plist */,
+				A31D984D1A634AA400F468C4 /* AndroidManifest.xml */,
 			);
 			path = Ejectoid;
 			sourceTree = "<group>";
@@ -105,6 +113,50 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A381CD271AB89BA2001C4623 /* Java */ = {
+			isa = PBXGroup;
+			children = (
+				A381CD281AB89BA2001C4623 /* com */,
+			);
+			path = Java;
+			sourceTree = "<group>";
+		};
+		A381CD281AB89BA2001C4623 /* com */ = {
+			isa = PBXGroup;
+			children = (
+				A381CD291AB89BA2001C4623 /* trompogames */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		A381CD291AB89BA2001C4623 /* trompogames */ = {
+			isa = PBXGroup;
+			children = (
+				A381CD2A1AB89BA2001C4623 /* Ejectoid */,
+			);
+			path = trompogames;
+			sourceTree = "<group>";
+		};
+		A381CD2A1AB89BA2001C4623 /* Ejectoid */ = {
+			isa = PBXGroup;
+			children = (
+				A381CD2B1AB89BA2001C4623 /* EjectoidActivity.java */,
+				A381CD2C1AB89BA2001C4623 /* EjectoidGLBridge.java */,
+				A381CD2D1AB89BA2001C4623 /* EjectoidGLView.java */,
+			);
+			path = Ejectoid;
+			sourceTree = "<group>";
+		};
+		A381CD311AB89BAA001C4623 /* Native */ = {
+			isa = PBXGroup;
+			children = (
+				A381CD321AB89BAA001C4623 /* EjectoidActivity.m */,
+				A381CD341AB89BAA001C4623 /* EjectoidGL.h */,
+				A381CD331AB89BAA001C4623 /* EjectoidGL.c */,
+			);
+			path = Native;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -112,6 +164,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A381CD371AB89BAA001C4623 /* EjectoidGL.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +257,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A31D984A1A634AA400F468C4 /* EjectoidActivity.m in Sources */,
+				A381CD351AB89BAA001C4623 /* EjectoidActivity.m in Sources */,
+				A381CD361AB89BAA001C4623 /* EjectoidGL.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A31D984C1A634AA400F468C4 /* EjectoidActivity.java in Sources */,
+				A381CD301AB89BA2001C4623 /* EjectoidGLView.java in Sources */,
+				A381CD2F1AB89BA2001C4623 /* EjectoidGLBridge.java in Sources */,
+				A381CD2E1AB89BA2001C4623 /* EjectoidActivity.java in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +377,13 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Ejectoid/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-ObjC",
+					"-lEGL",
+					"-lgles_apportable",
+					"-landroid",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -331,6 +394,13 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Ejectoid/Info.plist;
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-ObjC",
+					"-lEGL",
+					"-lgles_apportable",
+					"-landroid",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -355,6 +425,7 @@
 				A31D98521A634AA400F468C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A31D98531A634AA400F468C4 /* Build configuration list for PBXNativeTarget "Ejectoid" */ = {
 			isa = XCConfigurationList;
@@ -363,6 +434,7 @@
 				A31D98551A634AA400F468C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

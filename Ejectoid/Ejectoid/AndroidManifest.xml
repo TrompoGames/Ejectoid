@@ -3,6 +3,7 @@
     package="com.trompogames.Ejectoid" >
     <uses-sdk android:targetSdkVersion="14" android:minSdkVersion="9"></uses-sdk>
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:glEsVersion="0x00020000"/>
     <application
         android:allowBackup="true"
         android:label="Ejectoid"
@@ -10,6 +11,8 @@
         <activity
             android:name=".EjectoidActivity"
             android:label="Ejectoid"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize">
             <intent-filter>
